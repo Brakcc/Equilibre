@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="387f7f1a-5b27-4b3f-97a9-024bcad67bf3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/AbstractInteractableBehavior.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/AbstractInteractableBehavior.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/SnowInter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/SnowInter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PLayerPush.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PLayerPush.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerGrounding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerGrounding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerRotation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Equilibre.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Equilibre.sln.DotSettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +34,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2bdNbbUQCIlxUT8C8xb4FJLC7KU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Clem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706541069966</updated>
       <workItem from="1706541077097" duration="17000" />
-      <workItem from="1706606673657" duration="10508000" />
+      <workItem from="1706606673657" duration="16070000" />
     </task>
     <servers />
   </component>
