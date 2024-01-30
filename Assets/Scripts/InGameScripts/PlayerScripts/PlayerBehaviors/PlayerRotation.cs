@@ -46,7 +46,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         {
             var newDir = move.action.ReadValue<Vector2>();
             
-            if (newDir.magnitude >= Constants.MinimalMoveInputSecu)
+            if (newDir.magnitude >= Constants.MinimalRotaInputSecu)
                 _lastDir = new Vector3(newDir.x, 0, newDir.y).normalized;
         }
 
