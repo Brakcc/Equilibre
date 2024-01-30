@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2372997577036273527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8602010131634265206}
+  - component: {fileID: 9133333961106725336}
+  m_Layer: 0
+  m_Name: Herbe array
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8602010131634265206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372997577036273527}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.94, y: -6.2, z: 20.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9133333961106725336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372997577036273527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7591bb81367377c4b9e947ce061e89aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4404836699818590409, guid: 9ea32e3f95e84534ab9057db40c980b9, type: 3}
+  preservePrefab: 1
+  generateOnStart: 0
+  makeNewObject: 0
+  inPlace: 1
+  namingMode: 0
+  customName: UnnamedObject
+  generationMode: 0
+  count1D: 10
+  count2D: {x: 0, y: 0}
+  count3D: {x: 0, y: 0, z: 0}
+  objectOffset: {x: 0.5, y: 0, z: 0}
+  rowOffset: {x: 0, y: 0, z: 0}
+  floorOffset: {x: 0, y: 0, z: 0}
+  resetRotation: 0
+  applyParentRotation: 1
+  center: 1
+  randomPrefab: 1
+  startPrefabs: []
+  midPrefabs:
+  - {fileID: 4404836699818590409, guid: 9ea32e3f95e84534ab9057db40c980b9, type: 3}
+  - {fileID: 4907246208503663324, guid: d22b6bf4211283a41bff2896534e6a76, type: 3}
+  - {fileID: 697377919885862121, guid: ab36e64f085a2ca47b2a6e8556de6c24, type: 3}
+  - {fileID: 2618111870340136558, guid: 1f8fa881a79664342bb02eaacaba8333, type: 3}
+  - {fileID: 1302408655782300810, guid: f07d136b3b8c4844e8af751f521967a2, type: 3}
+  - {fileID: 9053396177220548745, guid: 94e061127e7f026459ca11b019827892, type: 3}
+  - {fileID: 6952293682511627742, guid: ab098176379570242b6f3f01f1784cec, type: 3}
+  - {fileID: 7309807928278008270, guid: fee8e96e30867e944bf7ec73fa6b5631, type: 3}
+  endPrefabs: []
+  randomSprite: 0
+  startSprites: []
+  midSprites: []
+  endSprites: []
