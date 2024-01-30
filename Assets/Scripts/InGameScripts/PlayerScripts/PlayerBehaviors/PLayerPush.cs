@@ -1,6 +1,6 @@
 ﻿namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
-    public sealed class PLayerPush : AbstractPlayerBehavior
+    public class PLayerPush : AbstractPlayerBehavior
     {
         
     }

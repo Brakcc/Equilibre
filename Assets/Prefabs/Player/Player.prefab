@@ -89,6 +89,7 @@ Transform:
   - {fileID: 456769303061226867}
   - {fileID: 6469988833526450679}
   - {fileID: 6913706454279270250}
+  - {fileID: 31295348071195046}
   m_Father: {fileID: 4594121782298884283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1408587131249725818
@@ -346,8 +347,6 @@ MonoBehaviour:
   fireCollider: {fileID: 5613483523600340826}
   iceRend: {fileID: 4341072262170941142}
   fireRend: {fileID: 2896165511257917498}
-  unlockedFire: 0
-  unlockedIce: 0
 --- !u!143 &8626420242839691417
 CharacterController:
   m_ObjectHideFlags: 0
@@ -384,10 +383,9 @@ GameObject:
   m_Component:
   - component: {fileID: 137612514167618992}
   - component: {fileID: 5613483523600340826}
-  - component: {fileID: 6424958420764558642}
   m_Layer: 3
   m_Name: Fire
-  m_TagString: FirePower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,35 +424,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.0680847, z: 4.2531595}
-  m_Center: {x: 0, y: -0.5340426, z: 1.6265798}
---- !u!54 &6424958420764558642
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2310525783224727569}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 1, y: 1.6165737, z: 4.2531595}
+  m_Center: {x: 0, y: -0.30828685, z: 1.6265798}
 --- !u!1 &2350190719857274207
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,10 +436,9 @@ GameObject:
   m_Component:
   - component: {fileID: 456769303061226867}
   - component: {fileID: 1865911121896416241}
-  - component: {fileID: 2127324906206849014}
   m_Layer: 3
   m_Name: Ice
-  m_TagString: IcePower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,35 +477,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.9847891, z: 4.2531595}
-  m_Center: {x: 0, y: -0.49239457, z: 1.6265798}
---- !u!54 &2127324906206849014
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2350190719857274207}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 1, y: 1.6165737, z: 4.2531595}
+  m_Center: {x: 0, y: -0.30828685, z: 1.6265798}
 --- !u!1 &7944698728899882777
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,3 +783,77 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
+--- !u!1001 &6899535577545710747
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7748646855521461813}
+    m_Modifications:
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437648588102261824, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+        type: 3}
+      propertyPath: m_Name
+      value: Player footprints
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73d64e8bd1a8ebc408412f510ecadd23, type: 3}
+--- !u!4 &31295348071195046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6894797695898090813, guid: 73d64e8bd1a8ebc408412f510ecadd23,
+    type: 3}
+  m_PrefabInstance: {fileID: 6899535577545710747}
+  m_PrefabAsset: {fileID: 0}

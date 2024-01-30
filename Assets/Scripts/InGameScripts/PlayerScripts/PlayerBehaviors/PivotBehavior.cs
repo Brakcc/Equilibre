@@ -3,7 +3,7 @@ using Utilities.CustomAttributes;
 
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
-    public sealed class PivotBehavior : AbstractPlayerBehavior
+    public class PivotBehavior : AbstractPlayerBehavior
     {
         [FieldImportanceLevel] [SerializeField] private Transform playerPos;
         [SerializeField] private Vector3 offset;
