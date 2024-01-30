@@ -5,7 +5,7 @@ using Utilities.CustomAttributes;
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     [RequireComponent(typeof(CharacterController))]
-    public class PlayerGrounding : AbstractPlayerBehavior
+    public sealed class PlayerGrounding : AbstractPlayerBehavior
     {
         #region fields
         

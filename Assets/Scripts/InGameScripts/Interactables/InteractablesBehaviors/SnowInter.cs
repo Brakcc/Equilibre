@@ -1,11 +1,28 @@
-﻿namespace InGameScripts.Interactables.InteractablesBehaviors
-{
-    public class SnowInter : AbstractInteractableBehavior
-    {
+﻿using UnityEngine;
 
-        protected override void OnAction<T>(T t)
+namespace InGameScripts.Interactables.InteractablesBehaviors
+{
+    public sealed class SnowInter : AbstractInteractableBehavior
+    {
+        #region methodes
+        
+        protected override void OnTriggerEnter(Collider other)
         {
-            throw new System.NotImplementedException();
+            if (!other.CompareTag("FirePower"))
+                return;
+            
+            OnAction();
         }
+
+        protected override void OnAction()
+        {
+            var tempRend = GetComponent<MeshRenderer>();
+            var tempCol = GetComponent<Collider>();
+                
+            tempRend.enabled = false;
+            tempCol.enabled = false;
+        }
+        
+        #endregion
     }
 }
