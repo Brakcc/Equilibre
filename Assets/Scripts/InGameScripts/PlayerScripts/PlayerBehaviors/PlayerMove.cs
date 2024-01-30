@@ -11,8 +11,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
     {
         #region fields
 
-        [FieldImportanceLevel] [SerializeField] private InputActionReference move;
-        [FieldImportanceLevel] [SerializeField] private CharacterController _charaCont;
+        [FieldCompletion] [SerializeField] private InputActionReference move;
+        [FieldCompletion] [SerializeField] private CharacterController _charaCont;
         
         [Space]
         [SerializeField] private float moveSpeed;

@@ -12,12 +12,10 @@ namespace InGameScripts.Interactables
         {
             OnAction();
             OnAction(boolVal: default);
-            OnAction(intVal: default);
         }
 
         protected virtual void OnAction() {}
         protected virtual void OnAction(bool boolVal) {}
-        protected virtual void OnAction(int intVal) {}
 
         #endregion
     }

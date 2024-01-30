@@ -6,6 +6,7 @@ TagManager:
   tags:
   - IcePower
   - FirePower
+  - DeathZone
   layers:
   - Default
   - TransparentFX

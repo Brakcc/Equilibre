@@ -760,6 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e65e378f1f646088ed7ba0386ddd39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsBaseOn: 1
   hasSnowOnBlock: 0
   noIceTimer: 3
   iceLayer: {fileID: 6312269833011584982}
