@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ice
+  m_Name: Ice_Seb
   m_Shader: {fileID: -6465566751694194690, guid: 42d3a4665c767024baf06d6d8ed6a3e4,
     type: 3}
   m_Parent: {fileID: 0}
@@ -117,13 +117,14 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Float: 1.03
+    - _Float: 1.57
     - _Float_1: 0.37
-    - _Float_2: 0.05
+    - _Float_2: 0.17
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _Normal: 0.37
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
