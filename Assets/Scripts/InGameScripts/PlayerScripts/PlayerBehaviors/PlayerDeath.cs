@@ -34,7 +34,6 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
 
         internal async void OnDie()
         {
-            Debug.Log(2);
             isDed = true;
             
             await Task.Delay(timeBeforeRespawn);
