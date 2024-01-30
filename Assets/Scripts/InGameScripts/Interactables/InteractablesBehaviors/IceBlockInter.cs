@@ -1,6 +1,6 @@
 ﻿namespace InGameScripts.Interactables.InteractablesBehaviors
 {
-    public class IceBlockInter : AbstractInteractableBehavior
+    public sealed class IceBlockInter : AbstractInteractableBehavior
     {
         
     }

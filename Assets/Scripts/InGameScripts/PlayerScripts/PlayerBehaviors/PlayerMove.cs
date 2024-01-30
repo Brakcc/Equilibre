@@ -20,8 +20,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         
         [Space]
         [Header("HitAndSlip Parameters")]
-        [FieldColorLerp(FieldColor.Red, FieldColor.Green, 0, 1), Range(0, 1), SerializeField] private float bottomHorizRayCastOffset;
-        [FieldColorLerp(FieldColor.Red, FieldColor.Green, 0, 1), Range(0, 1), SerializeField] private float sideHorizRayCastOffset;
+        [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float bottomHorizRayCastOffset;
+        [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float sideHorizRayCastOffset;
         [FieldColorLerp(FieldColor.Cyan, FieldColor.Blue, 0, 1), Range(0, 1), SerializeField] private float sideHorizRayCastHeight;
         [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float minHitAndSlipVel;
         [SerializeField] private LayerMask groundLayer;

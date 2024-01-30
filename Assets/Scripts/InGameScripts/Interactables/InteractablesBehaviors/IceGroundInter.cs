@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
+using Utilities.CustomAttributes;
 
 namespace InGameScripts.Interactables.InteractablesBehaviors
 {
-    public class IceGroundInter : AbstractInteractableBehavior
+    public sealed class IceGroundInter : AbstractInteractableBehavior
     {
         #region fields
 
-        [SerializeField] private bool hasSnowOnBlock;
+        [CheckerState] [SerializeField] private bool hasSnowOnBlock;
         [SerializeField] private float noIceTimer;
         [SerializeField] private GameObject iceLayer;
 

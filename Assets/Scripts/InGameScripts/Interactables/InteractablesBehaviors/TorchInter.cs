@@ -1,17 +1,27 @@
 ﻿using UnityEngine;
+using Utilities.CustomAttributes;
 
 namespace InGameScripts.Interactables.InteractablesBehaviors
 {
-    public class TorchInter : AbstractInteractableBehavior
+    public sealed class TorchInter : AbstractInteractableBehavior
     {
         #region fields
 
         [SerializeField] private MeshRenderer fireRend;
-        public bool isOnFire;
+        [SerializeField] private MeshRenderer externFire;
+        [SerializeField] private new Light light;
+        [CheckerState] public bool isOnFire;
 
         #endregion
 
         #region methodes
+
+        private void Start()
+        {
+            fireRend.enabled = isOnFire;
+            externFire.enabled = isOnFire;
+            light.intensity = GetLightIntensity(isOnFire);
+        }
 
         protected override void OnTriggerEnter(Collider other)
         {
@@ -19,14 +29,18 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
                 OnAction(true);
             
             if (other.CompareTag("IcePower"))
-                OnAction(true);
+                OnAction(false);
         }
 
         protected override void OnAction(bool active)
         {
             isOnFire = active;
             fireRend.enabled = active;
+            externFire.enabled = active;
+            light.intensity = GetLightIntensity(active);
         }
+
+        private static int GetLightIntensity(bool isOn) => isOn ? 5 : 0;
 
         #endregion
     }
