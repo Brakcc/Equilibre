@@ -4,15 +4,19 @@ using Utilities.CustomAttributes;
 
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
-    public class PlayerPower : AbstractPlayerBehavior
+    public sealed class PlayerPower : AbstractPlayerBehavior
     {
         #region fields
         
-        [FieldImportanceLevel] [SerializeField] private Collider iceCollider;
-        [FieldImportanceLevel] [SerializeField] private Collider fireCollider;
+        [FieldCompletion] [SerializeField] private Collider iceCollider;
+        [FieldCompletion] [SerializeField] private Collider fireCollider;
 
-        [FieldImportanceLevel] [SerializeField] private MeshRenderer iceRend;
-        [FieldImportanceLevel] [SerializeField] private MeshRenderer fireRend;
+        [FieldCompletion] [SerializeField] private MeshRenderer iceRend;
+        [FieldCompletion] [SerializeField] private MeshRenderer fireRend;
+
+        public bool unlockedFire;
+        public bool unlockedIce;
+        
 
         #endregion
 
@@ -31,7 +35,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
 
         public void OnActivateFire(InputAction.CallbackContext ctx)
         {
-            if (iceCollider.enabled)
+            if (iceCollider.enabled || !unlockedFire)
                 return;
             
             fireCollider.enabled = ctx.performed;
@@ -40,7 +44,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
 
         public void OnActivateIce(InputAction.CallbackContext ctx)
         {
-            if (fireCollider.enabled)
+            if (fireCollider.enabled || !unlockedIce)
                 return;
             
             iceCollider.enabled = ctx.performed;
