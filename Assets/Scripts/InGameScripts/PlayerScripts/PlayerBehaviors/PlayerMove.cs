@@ -7,7 +7,7 @@ using Utilities.CustomAttributes.FieldColors;
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     [RequireComponent(typeof(CharacterController))]
-    public class PlayerMove : AbstractPlayerBehavior
+    public sealed class PlayerMove : AbstractPlayerBehavior
     {
         #region fields
 
