@@ -8,10 +8,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         protected override void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
-            {
-                Debug.Log(1);
                 other.GetComponent<PlayerDeath>().OnDie();
-            }
         }
     }
 }
