@@ -6,7 +6,7 @@ using Utilities.CustomAttributes.FieldColors;
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     [RequireComponent(typeof(CharacterController))]
-    public class PlayerRotation : AbstractPlayerBehavior
+    public sealed class PlayerRotation : AbstractPlayerBehavior
     {
         #region fields
 
