@@ -1,7 +1,21 @@
-﻿namespace InGameScripts.Interactables.InteractablesBehaviors
+﻿using UnityEngine;
+
+namespace InGameScripts.Interactables.InteractablesBehaviors
 {
-    public class IceBlockInter : AbstractInteractableBehavior
+    public sealed class IceBlockInter : AbstractInteractableBehavior
     {
-        
+        #region methodes
+
+        protected override void OnTriggerEnter(Collider other)
+        {
+            if (!other.CompareTag("FirePower"))
+                return;
+            
+            OnAction();
+        }
+
+        protected override void OnAction() => Destroy(gameObject);
+
+        #endregion
     }
 }

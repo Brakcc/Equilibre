@@ -9,7 +9,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
     {
         #region fields
         
-        [FieldImportanceLevel] [SerializeField] private CharacterController _charaCont;
+        [FieldCompletion] [SerializeField] private CharacterController _charaCont;
         [Space]
         
         [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float lerpCoef;

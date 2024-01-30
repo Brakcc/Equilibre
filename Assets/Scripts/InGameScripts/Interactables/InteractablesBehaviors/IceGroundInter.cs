@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
+using Utilities.CustomAttributes;
+using Utilities.CustomAttributes.FieldColors;
 
 namespace InGameScripts.Interactables.InteractablesBehaviors
 {
-    public class IceGroundInter : AbstractInteractableBehavior
+    public sealed class IceGroundInter : AbstractInteractableBehavior
     {
         #region fields
 
-        [SerializeField] private bool hasSnowOnBlock;
+        [CheckerState] [SerializeField] private bool IsBaseOn;
+        [CheckerState(FieldColor.Orange, FieldColor.Cyan)] [SerializeField] private bool hasSnowOnBlock;
         [SerializeField] private float noIceTimer;
-        [SerializeField] private GameObject iceLayer;
+        [FieldCompletion] [SerializeField] private GameObject iceLayer;
 
         private float _noIceCounter;
         private bool _isIced;
@@ -17,11 +20,22 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         
         #region methodes
 
+        private void Start()
+        {
+            if (IsBaseOn)
+                return;
+                
+            OnAction(false);
+        }
+
         private void Update()
         {
             if (_isIced)
                 return;
 
+            if (!IsBaseOn)
+                return;
+            
             _noIceCounter -= Time.deltaTime;
             
             if (_noIceCounter <= 0)
