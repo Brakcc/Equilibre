@@ -27,6 +27,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         {
             _lastDir = Vector3.forward;
             _currentLookDir = Vector3.forward;
+            _death = GetComponent<PlayerDeath>();
         }
 
         protected override void OnFixedUpdate()

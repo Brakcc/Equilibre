@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="387f7f1a-5b27-4b3f-97a9-024bcad67bf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DeathZoneInter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/WaterInter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/WaterInter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerDeath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blocs/Ice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Blocs/Ice.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/AbstractInteractableBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/AbstractInteractableBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceBlockInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceBlockInter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceGroundInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceGroundInter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PLayerPush.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPush.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PLayerPush.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PivotBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PivotBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerGrounding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerGrounding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerRotation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerFullBehave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerFullBehave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/FieldImportanceLevelDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/FieldImportanceLevelDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldImportanceLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldCompletion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldImportanceLevel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldCompletion.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DoorInter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DoorInter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DeathZoneInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DeathZoneInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerDeath.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706541069966</updated>
       <workItem from="1706541077097" duration="17000" />
-      <workItem from="1706606673657" duration="33132000" />
+      <workItem from="1706606673657" duration="33514000" />
     </task>
     <servers />
   </component>
