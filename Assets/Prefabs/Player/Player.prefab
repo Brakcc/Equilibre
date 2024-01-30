@@ -182,6 +182,7 @@ MonoBehaviour:
   behaviors:
   - {fileID: 9195763283961167568}
   - {fileID: 3673545350309078170}
+  - {fileID: 5982461086433114336}
 --- !u!114 &9195763283961167568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,10 +198,10 @@ MonoBehaviour:
   _charaCont: {fileID: 8626420242839691417}
   lerpCoef: 0.4
   maxAccelCoef: -5
-  sideRayCastOffset: 0.15
+  sideDownRayCastOffset: 0.15
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
 --- !u!114 &3673545350309078170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,8 +215,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: -1680190386980627800, guid: 84885fc1d65564a4c927d656fdb83c92, type: 3}
+  _charaCont: {fileID: 8626420242839691417}
   moveSpeed: 7.5
   lerpCoef: 7
+  bottomHorizRayCastOffset: 0.1
+  sideHorizRayCastOffset: 0.1
+  sideHorizRayCastHeight: 0.35
+  minHitAndSlipVel: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 192
+  iceLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &5982461086433114336
 MonoBehaviour:
   m_ObjectHideFlags: 0
