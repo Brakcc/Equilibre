@@ -8,15 +8,14 @@ namespace InGameScripts.Interactables
         #region methodes
 
         //To herit
-
         protected virtual void OnTriggerEnter(Collider other)
         {
             OnAction();
-            OnAction(boolVal: default);
+            OnAction(default);
         }
-
+        
         protected virtual void OnAction() {}
-        protected virtual void OnAction(bool boolVal) {}
+        protected virtual void OnAction(bool tempB) {}
 
         #endregion
     }

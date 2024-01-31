@@ -5,7 +5,7 @@ using Utilities.CustomAttributes;
 //Git
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
-    public sealed class PlayerPower : AbstractPlayerBehavior
+    public class PlayerPower : AbstractPlayerBehavior
     {
         #region fields
         
@@ -14,10 +14,6 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
 
         [FieldCompletion] [SerializeField] private MeshRenderer iceRend;
         [FieldCompletion] [SerializeField] private MeshRenderer fireRend;
-
-        public bool unlockedFire;
-        public bool unlockedIce;
-        
 
         #endregion
 
@@ -36,7 +32,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
 
         public void OnActivateFire(InputAction.CallbackContext ctx)
         {
-            if (iceCollider.enabled || !unlockedFire)
+            if (iceCollider.enabled)
                 return;
             
             fireCollider.enabled = ctx.performed;
@@ -45,7 +41,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
 
         public void OnActivateIce(InputAction.CallbackContext ctx)
         {
-            if (fireCollider.enabled || !unlockedIce)
+            if (fireCollider.enabled)
                 return;
             
             iceCollider.enabled = ctx.performed;

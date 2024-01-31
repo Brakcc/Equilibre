@@ -6,7 +6,7 @@ using Utilities.CustomAttributes;
 //Git
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
-    public sealed class PlayerPush : AbstractPlayerBehavior
+    public class PLayerPush : AbstractPlayerBehavior
     {
         #region fields
 
