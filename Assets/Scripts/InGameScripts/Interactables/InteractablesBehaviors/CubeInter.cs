@@ -73,9 +73,19 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             if (!IsActivated)
                 return;
 
+            if (IsWallHitting(_currentCubeDir, out var wall))
+            {
+                if (wall.transform.gameObject.layer is 6 or 8 or 9)
+                {
+                    IsActivated = false;
+                    _currentMoveDir = Vector3.zero;
+                    _currentCubeDir = default;
+                }
+            }
+            
             if (IsHittingGround(_currentCubeDir, out var hit))
             {
-                if (hit.transform.gameObject.layer is 6 or 8)
+                if (hit.transform.gameObject.layer is 6 or 8 or 9)
                 {
                     IsActivated = false;
                     _currentMoveDir = Vector3.zero;
@@ -132,6 +142,46 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             }
         }
 
+        private bool IsWallHitting(CubeDir dir, out RaycastHit ray)
+        {
+            ray = default;
+            var pos = cubeRef.transform.position;
+            switch (dir)
+            {
+                case CubeDir.North :
+                    var r1 = Physics.Raycast(pos + Vector3.forward * 0.51f,
+                        Vector3.forward, out var hit1, 0.1f,
+                        fullLayer);
+                    ray = hit1;
+                    return r1;
+
+                case CubeDir.East :
+                    var r2 = Physics.Raycast(pos + Vector3.right * 0.51f,
+                        Vector3.right, out var hit2, 0.1f,
+                        fullLayer);
+                    ray = hit2;
+                    return r2;
+
+                case CubeDir.South :
+                    var r3 = Physics.Raycast(pos + Vector3.back * 0.51f,
+                        Vector3.back, out var hit3, 0.1f,
+                        fullLayer);
+                    ray = hit3;
+                    return r3;
+
+                case CubeDir.West :
+                    var r4 = Physics.Raycast(pos + Vector3.left * 0.51f,
+                        Vector3.left, out var hit4, 0.1f,
+                        fullLayer);
+                    ray = hit4;
+                    return r4;
+
+                default :
+                    ray = default;
+                    return false;
+            }
+        }
+        
         private GameObject HasPlayer()
         {
             if (Physics.Raycast(transform.position, Vector3.forward, out var hit1, 1.5f, playerLayer))
@@ -158,6 +208,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
                 return hit4.transform.gameObject;
             }
 
+            //_currentCubeDir = CubeDir.Default;
             return null;
         }
 
@@ -169,6 +220,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             CubeDir.East => Vector3.right,
             CubeDir.South => Vector3.back,
             CubeDir.West => Vector3.left,
+            CubeDir.Default => Vector3.zero,
             _ => Vector3.zero
         };
 
@@ -178,6 +230,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
 internal enum CubeDir
 {
+    Default,
     North,
     East,
     South,
