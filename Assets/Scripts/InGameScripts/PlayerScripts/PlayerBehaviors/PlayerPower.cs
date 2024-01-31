@@ -18,6 +18,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         [FieldCompletion] [SerializeField] private ParticleSystem iceParts;
         [FieldCompletion] [SerializeField] private ParticleSystem fireParts;
 
+        public bool hasFireUnlocked;
+        
         #endregion
 
         #region methodes
@@ -26,6 +28,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         {
             base.OnStart();
 
+            hasFireUnlocked = false;
+            
             iceCollider.enabled = false;
             fireCollider.enabled = false;
 
@@ -39,6 +43,9 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         public void OnActivateFire(InputAction.CallbackContext ctx)
         {
             if (iceCollider.enabled)
+                return;
+            
+            if (!hasFireUnlocked)
                 return;
             
             fireCollider.enabled = ctx.performed;
