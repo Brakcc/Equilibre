@@ -9,12 +9,13 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         #region fields
 
         [CheckerState] [SerializeField] private bool isStartingOn;
+        
         public bool IsActivated { get => isActive; private set => isActive = value; }
         [SerializeField] private bool isActive;
-        [SerializeField] private DoorInter doorRef;
-        public DoorInter DoorRef { get => doorRef; set => doorRef = value; }
-
-        [Space] [SerializeField] private float activationCooldown;
+        public DoorInter[] DoorRef { get => doorRef; set => doorRef = value; }
+        [SerializeField] private DoorInter[] doorRef;
+        
+        [SerializeField] private float activationCooldown;
         
         private float _cooldownCounter;
 
@@ -43,7 +44,12 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             
             _cooldownCounter = activationCooldown;
             IsActivated = !IsActivated;
-            DoorRef.OnActivatorChangeState();
+            if (DoorRef.Length == 0)
+                return;
+            foreach (var d in DoorRef)
+            {
+                d.OnActivatorChangeState();
+            }
         }
 
         #endregion
