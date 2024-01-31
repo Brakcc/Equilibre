@@ -12,12 +12,12 @@ namespace Utilities.CustomAttributes
     /// </summary>
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property |
                     AttributeTargets.Class | AttributeTargets.Struct, Inherited = true)]
-    public class FieldCompletion : PropertyAttribute
+    public class FieldImportanceLevel : PropertyAttribute
     {
         public Color unCheckedColor;
         public Color checkedColor;
 
-        public FieldCompletion(FieldColor _uncheckedColor = FieldColor.Red, FieldColor _checkedColor = FieldColor.Cyan)
+        public FieldImportanceLevel(FieldColor _uncheckedColor = FieldColor.Red, FieldColor _checkedColor = FieldColor.Cyan)
         {
             unCheckedColor = GetFieldColor.GetFC(_uncheckedColor);
 

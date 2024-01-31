@@ -8,12 +8,12 @@ using Utilities.CustomAttributes.FieldColors;
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     [RequireComponent(typeof(CharacterController))]
-    public sealed class PlayerMove : AbstractPlayerBehavior
+    public class PlayerMove : AbstractPlayerBehavior
     {
         #region fields
 
-        [FieldCompletion] [SerializeField] private InputActionReference move;
-        [FieldCompletion] [SerializeField] private CharacterController _charaCont;
+        [FieldImportanceLevel] [SerializeField] private InputActionReference move;
+        [FieldImportanceLevel] [SerializeField] private CharacterController _charaCont;
         
         [Space]
         [SerializeField] private float moveSpeed;
@@ -21,8 +21,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         
         [Space]
         [Header("HitAndSlip Parameters")]
-        [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float bottomHorizRayCastOffset;
-        [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float sideHorizRayCastOffset;
+        [FieldColorLerp(FieldColor.Red, FieldColor.Green, 0, 1), Range(0, 1), SerializeField] private float bottomHorizRayCastOffset;
+        [FieldColorLerp(FieldColor.Red, FieldColor.Green, 0, 1), Range(0, 1), SerializeField] private float sideHorizRayCastOffset;
         [FieldColorLerp(FieldColor.Cyan, FieldColor.Blue, 0, 1), Range(0, 1), SerializeField] private float sideHorizRayCastHeight;
         [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float minHitAndSlipVel;
         [SerializeField] private LayerMask groundLayer;

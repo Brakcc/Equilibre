@@ -4,12 +4,12 @@ using UnityEngine;
 //Git
 namespace Utilities.CustomAttributes.Editor
 {
-    [CustomPropertyDrawer(typeof(FieldCompletion))]
+    [CustomPropertyDrawer(typeof(FieldImportanceLevel))]
     public class FieldImportanceLevelDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            var field = attribute as FieldCompletion;
+            var field = attribute as FieldImportanceLevel;
         
             if(property.objectReferenceValue == null)
             {

@@ -7,18 +7,17 @@ using Utilities.CustomAttributes.FieldColors;
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     [RequireComponent(typeof(CharacterController))]
-    public sealed class PlayerRotation : AbstractPlayerBehavior
+    public class PlayerRotation : AbstractPlayerBehavior
     {
         #region fields
 
-        [FieldCompletion] [SerializeField] private InputActionReference move;
+        [FieldImportanceLevel] [SerializeField] private InputActionReference move;
         
         [Space]
         [FieldColorLerp(FieldColor.Orange, FieldColor.Cyan, 1, 10)] [Range(1, 10)] [SerializeField] private float lerpCoef;
 
         private Vector3 _lastDir;
         private Vector3 _currentLookDir;
-        private PlayerDeath _death;
 
         #endregion
 
@@ -28,16 +27,11 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         {
             _lastDir = Vector3.forward;
             _currentLookDir = Vector3.forward;
-            _death = GetComponent<PlayerDeath>();
         }
 
         protected override void OnFixedUpdate()
         {
             base.OnFixedUpdate();
-            
-            if (_death.isDed)
-                return;
-            
             GetDir();
 
             var angle = Vector3.Dot(_lastDir, _currentLookDir) / (_currentLookDir.magnitude * _lastDir.magnitude);

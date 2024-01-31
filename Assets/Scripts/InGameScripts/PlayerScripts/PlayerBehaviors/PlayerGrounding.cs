@@ -6,11 +6,11 @@ using Utilities.CustomAttributes;
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     [RequireComponent(typeof(CharacterController))]
-    public sealed class PlayerGrounding : AbstractPlayerBehavior
+    public class PlayerGrounding : AbstractPlayerBehavior
     {
         #region fields
         
-        [FieldCompletion] [SerializeField] private CharacterController _charaCont;
+        [FieldImportanceLevel] [SerializeField] private CharacterController _charaCont;
         [Space]
         
         [FieldColorLerp(0, 1), Range(0, 1), SerializeField] private float lerpCoef;
