@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7d5ec1a34940479bfa2bf87ef823a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iceTimer: 3
+  iceTimer: 7
   iceLayer: {fileID: 6737552621681076002}
 --- !u!1 &6737552621681076002
 GameObject:
