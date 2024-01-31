@@ -122,7 +122,7 @@ MonoBehaviour:
   sideRayOffset: 0.1
   fullLayer:
     serializedVersion: 2
-    m_Bits: 1472
+    m_Bits: 1984
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
