@@ -39,7 +39,6 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         {
             if (Physics.Raycast(cubeRef.transform.position, Vector3.down, out var hit, 2f, fullLayer))
             {
-                Debug.Log(hit.transform.gameObject.layer);
                 if (hit.transform.gameObject.layer == 10)
                 {
                     IsActivated = false;
@@ -62,8 +61,6 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
         public void OnActivatorAction()
         {
-            Debug.Log(1);
-            
             if (IsActivated)
                 return;
             
