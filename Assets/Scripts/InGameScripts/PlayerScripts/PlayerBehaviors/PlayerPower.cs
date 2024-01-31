@@ -15,6 +15,9 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         [FieldCompletion] [SerializeField] private MeshRenderer iceRend;
         [FieldCompletion] [SerializeField] private MeshRenderer fireRend;
 
+        [FieldCompletion] [SerializeField] private ParticleSystem iceParts;
+        [FieldCompletion] [SerializeField] private ParticleSystem fireParts;
+
         #endregion
 
         #region methodes
@@ -26,8 +29,11 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
             iceCollider.enabled = false;
             fireCollider.enabled = false;
 
-            iceRend.enabled = false;
-            fireRend.enabled = false;
+            //iceRend.enabled = false;
+            //fireRend.enabled = false;
+
+            iceParts.Stop();
+            fireParts.Stop();
         }
 
         public void OnActivateFire(InputAction.CallbackContext ctx)
@@ -36,7 +42,11 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
                 return;
             
             fireCollider.enabled = ctx.performed;
-            fireRend.enabled = ctx.performed;
+            //fireRend.enabled = ctx.performed;
+            if (ctx.performed)
+                fireParts.Play();
+            else
+                fireParts.Stop();
         }
 
         public void OnActivateIce(InputAction.CallbackContext ctx)
@@ -45,7 +55,14 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
                 return;
             
             iceCollider.enabled = ctx.performed;
-            iceRend.enabled = ctx.performed;
+            //iceRend.enabled = ctx.performed;
+            if (ctx.performed)
+                iceParts.Play();
+            else
+            {
+                iceParts.Stop();
+                iceParts.Clear();
+            }
         }
 
         #endregion
