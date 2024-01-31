@@ -62,16 +62,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ca2fafa400175342be22413eadbb88a, type: 2}
+      objectReference: {fileID: 2100000, guid: 680ff28fdfc0de349a3ac7d2eb01d92a, type: 2}
     - target: {fileID: 882129737928793925, guid: 1fb0449afa8221141b03d03e3fd7c9b5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ca2fafa400175342be22413eadbb88a, type: 2}
+      objectReference: {fileID: 2100000, guid: 680ff28fdfc0de349a3ac7d2eb01d92a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1fb0449afa8221141b03d03e3fd7c9b5,
         type: 3}
       propertyPath: m_Name
-      value: Arche_UV
+      value: Prfb_Arche_UV
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
