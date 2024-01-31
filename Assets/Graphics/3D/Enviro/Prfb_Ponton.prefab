@@ -61,8 +61,23 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c9bb9be1e3ea3fe4db11130e327ee64f,
         type: 3}
       propertyPath: m_Name
-      value: Ponton
+      value: Prfb_Ponton
       objectReference: {fileID: 0}
+    - target: {fileID: 3760099956985116139, guid: c9bb9be1e3ea3fe4db11130e327ee64f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1742443b2f83a014c93a31ef769d95d3, type: 2}
+    - target: {fileID: 4431670454091400558, guid: c9bb9be1e3ea3fe4db11130e327ee64f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1742443b2f83a014c93a31ef769d95d3, type: 2}
+    - target: {fileID: 8424073627695423409, guid: c9bb9be1e3ea3fe4db11130e327ee64f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1742443b2f83a014c93a31ef769d95d3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
