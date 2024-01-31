@@ -11,6 +11,11 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         [SerializeField] private MeshRenderer fireRend;
         [SerializeField] private MeshRenderer externFire;
         [SerializeField] private new Light light;
+        public ParticleSystem fireVFX;
+        public MeshRenderer charbon;
+        private Material braiseMat;
+        private Color baseColor;
+        private Color litColor;
         [CheckerState] public bool isOnFire;
 
         public bool IsActivated { get; private set; }
@@ -25,8 +30,14 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         {
             fireRend.enabled = isOnFire;
             externFire.enabled = isOnFire;
-            light.intensity = GetLightIntensity(isOnFire);
+            //light.intensity = GetLightIntensity(isOnFire);
+            light.enabled = isOnFire;
             IsActivated = isOnFire;
+            if (isOnFire) {fireVFX.Play();} else {fireVFX.Stop();}
+            braiseMat = charbon.material;
+            baseColor = braiseMat.GetColor("_Base_color");
+            litColor = braiseMat.GetColor("_Lit_color");
+            
         }
 
         protected override void OnTriggerEnter(Collider other)
@@ -43,7 +54,20 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             isOnFire = active;
             fireRend.enabled = active;
             externFire.enabled = active;
-            light.intensity = GetLightIntensity(active);
+            //light.intensity = GetLightIntensity(active);
+            light.enabled = active;
+            if (active) 
+            {
+                fireVFX.Play();
+                braiseMat.SetColor("_Base_color", baseColor);
+                braiseMat.SetColor("_Lit_color", litColor);
+            } 
+            else 
+            {
+                fireVFX.Stop();
+                braiseMat.SetColor("_Base_color", new Color(0,0,0));
+                braiseMat.SetColor("_Lit_color", new Color(0,0,0));
+            }
             
             IsActivated = isOnFire;
             if (DoorRef.Length == 0)
