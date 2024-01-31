@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using Utilities.CustomAttributes;
 using Utilities.CustomAttributes.FieldColors;
 
@@ -13,7 +14,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         #region fields
 
         [FieldCompletion] [SerializeField] private InputActionReference move;
-        [FieldCompletion] [SerializeField] private CharacterController _charaCont;
+        [FieldCompletion] [SerializeField] private CharacterController charaCont;
+        [FieldCompletion] [SerializeField] private Animator animator;
         
         [Space]
         [SerializeField] private float moveSpeed;
@@ -31,7 +33,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         private float _currentSpeed;
         private float _currentLerpCoef;
         private Vector3 _lastDir;
-        
+        private static readonly int IsWalking = Animator.StringToHash("isWalking");
+
         #endregion
 
         #region methodes
@@ -94,10 +97,14 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         private Vector3 GetDir()
         {
             var newDir = move.action.ReadValue<Vector2>();
-            
-            if (newDir.magnitude >= Constants.MinimalMoveInputSecu)
+
+            var tempB = newDir.magnitude >= Constants.MinimalMoveInputSecu;
+            if (tempB)
+            {
                 _lastDir = new Vector3(newDir.x, 0, newDir.y).normalized;
+            }
             
+            animator.SetBool(IsWalking, tempB);
             return new Vector3(newDir.x, 0, newDir.y);
         }
 
@@ -110,7 +117,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
                                                      Vector3.Dot(vec, new Vector3(1, 0, -1).normalized) <= Constants.MinDotSecuVal ||
                                                      Vector3.Dot(vec, new Vector3(-1, 0, -1).normalized) <= Constants.MinDotSecuVal;
 
-        private bool IsOnIce() => Physics.Raycast(transform.position, Vector3.down, _charaCont.height / 2 + Constants.MaxStepHeight, iceLayer);
+        private bool IsOnIce() => Physics.Raycast(transform.position, Vector3.down, charaCont.height / 2 + Constants.MaxStepHeight, iceLayer);
         
         private bool IsSlipHit(out Vector3 hitDir)
         {
@@ -120,69 +127,69 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
             var tempHitInfo = new List<RaycastHit>();
             
             //Bottom RayCasts
-            var c1 = Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                Vector3.forward, out var hit1, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c1 = Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                Vector3.forward, out var hit1, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c1) tempHitInfo.Add(hit1);
                 
-            var c2 = Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                Vector3.right, out var hit2, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c2 = Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                Vector3.right, out var hit2, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c2) tempHitInfo.Add(hit2);
             
-            var c3 = Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                Vector3.left, out var hit3, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c3 = Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                Vector3.left, out var hit3, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c3) tempHitInfo.Add(hit3);
             
-            var c4 = Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                Vector3.back, out var hit4, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c4 = Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                Vector3.back, out var hit4, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c4) tempHitInfo.Add(hit4);
             
-            var c5 = Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                new Vector3(1, 0, 1).normalized, out var hit5, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c5 = Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                new Vector3(1, 0, 1).normalized, out var hit5, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c5) tempHitInfo.Add(hit5);
             
-            var c6 = Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                new Vector3(1, 0, -1).normalized, out var hit6, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c6 = Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                new Vector3(1, 0, -1).normalized, out var hit6, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c6) tempHitInfo.Add(hit6);
             
-            var c7 = Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                new Vector3(-1, 0, 1).normalized, out var hit7, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c7 = Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                new Vector3(-1, 0, 1).normalized, out var hit7, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c7) tempHitInfo.Add(hit7);
             
-            var c8= Physics.Raycast(position - new Vector3(0, _charaCont.height / 2, 0), 
-                new Vector3(-1, 0, -1).normalized, out var hit8, _charaCont.radius + bottomHorizRayCastOffset, groundLayer);
+            var c8= Physics.Raycast(position - new Vector3(0, charaCont.height / 2, 0), 
+                new Vector3(-1, 0, -1).normalized, out var hit8, charaCont.radius + bottomHorizRayCastOffset, groundLayer);
             if (c8) tempHitInfo.Add(hit8);
             
             //Middle RayCasts
             var s1 = Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                Vector3.forward, out var shit1, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                Vector3.forward, out var shit1, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s1) tempHitInfo.Add(shit1);
                 
             var s2 = Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                Vector3.right, out var shit2, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                Vector3.right, out var shit2, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s2) tempHitInfo.Add(shit2);
             
             var s3 = Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                Vector3.left, out var shit3, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                Vector3.left, out var shit3, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s3) tempHitInfo.Add(shit3);
             
             var s4 = Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                Vector3.back, out var shit4, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                Vector3.back, out var shit4, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s4) tempHitInfo.Add(shit4);
             
             var s5 = Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                new Vector3(1, 0, 1).normalized, out var shit5, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                new Vector3(1, 0, 1).normalized, out var shit5, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s5) tempHitInfo.Add(shit5);
             
             var s6 = Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                new Vector3(1, 0, -1).normalized, out var shit6, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                new Vector3(1, 0, -1).normalized, out var shit6, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s6) tempHitInfo.Add(shit6);
             
             var s7 = Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                new Vector3(-1, 0, 1).normalized, out var shit7, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                new Vector3(-1, 0, 1).normalized, out var shit7, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s7) tempHitInfo.Add(shit7);
             
             var s8= Physics.Raycast(position - new Vector3(0, sideHorizRayCastHeight, 0), 
-                new Vector3(-1, 0, -1).normalized, out var shit8, _charaCont.radius + sideHorizRayCastOffset, groundLayer);
+                new Vector3(-1, 0, -1).normalized, out var shit8, charaCont.radius + sideHorizRayCastOffset, groundLayer);
             if (s8) tempHitInfo.Add(shit8);
 
             if (tempHitInfo.Count == 0)
@@ -203,8 +210,8 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         private void OnDrawGizmos()
         {
             var position = transform.position;
-            var height = _charaCont.height;
-            var radius = _charaCont.radius;
+            var height = charaCont.height;
+            var radius = charaCont.radius;
             
             Gizmos.color = Color.green;
             Gizmos.DrawLine(position - new Vector3(0, height / 2, 0),
