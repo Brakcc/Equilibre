@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Utilities.CustomAttributes;
 
 //Git
@@ -19,6 +19,11 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         
         private float _cooldownCounter;
 
+        [Header("Graph")]
+        public Animation animation;
+        public ParticleSystem onEnableVFX;
+        public ParticleSystem onDisableVFX;
+
         #endregion
 
         #region methodes
@@ -26,6 +31,14 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         private void Start()
         {
             IsActivated = isStartingOn;
+            if (IsActivated)
+            {
+                animation.Play("Switch on");
+            }
+            else
+            {
+                animation.Play("Switch off");
+            }
             _cooldownCounter = Constants.SecuDeltaTimeOffset;
         }
 
@@ -44,12 +57,29 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             
             _cooldownCounter = activationCooldown;
             IsActivated = !IsActivated;
+
+            // Graph
+            if (IsActivated)
+            {
+                onEnableVFX.Play();
+                animation.Play("Switch on");
+            }
+            else
+            {
+                onEnableVFX.Play();
+                animation.Play("Switch off");
+            }
+            
+            // Not graph
+
             if (DoorRef.Length == 0)
                 return;
             foreach (var d in DoorRef)
             {
                 d.OnActivatorChangeState();
             }
+            
+            
         }
 
         #endregion
