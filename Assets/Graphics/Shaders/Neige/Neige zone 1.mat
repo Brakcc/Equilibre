@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Height_map:
-        m_Texture: {fileID: 8600000, guid: 1bbb281dfe1d6d74c8dc715600b63fa1, type: 2}
+        m_Texture: {fileID: 8600000, guid: 0dc80e6932ee4df4ba31f8bf01fb5e12, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask_map:
