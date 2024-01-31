@@ -16,4 +16,7 @@
     public const float MinDotSecuVal = 0.001f;
 
     public const float MaxSlipContactAngle = 90f;
+    public const float RespawnOffsetHeight = 0.5f;
+    public const float SecuDeltaTimeOffset = -0.01f;
+    public const int DelayBeforeDoorAction = 500;
 }
