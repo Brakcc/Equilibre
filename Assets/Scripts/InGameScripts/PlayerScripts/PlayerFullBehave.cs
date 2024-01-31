@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+//Git
 namespace InGameScripts.PlayerScripts
 {
     public class PlayerFullBehave : MonoBehaviour
@@ -17,11 +18,18 @@ namespace InGameScripts.PlayerScripts
         private void Start()
         {
             _charaCont = GetComponent<CharacterController>();
+            _death = GetComponent<PlayerDeath>();
         }
 
         private void FixedUpdate()
         {
             var fullDir = new Vector3();
+            
+            if (_death.isDed)
+            {
+                return;
+            }
+            
             foreach (var behavior in behaviors)
             {
                 fullDir += behavior.Velocity;

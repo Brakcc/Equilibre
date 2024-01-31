@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using Utilities.CustomAttributes;
 using Utilities.CustomAttributes.FieldColors;
 
+//Git
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     [RequireComponent(typeof(CharacterController))]
@@ -10,13 +11,14 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
     {
         #region fields
 
-        [FieldImportanceLevel] [SerializeField] private InputActionReference move;
+        [FieldCompletion] [SerializeField] private InputActionReference move;
         
         [Space]
         [FieldColorLerp(FieldColor.Orange, FieldColor.Cyan, 1, 10)] [Range(1, 10)] [SerializeField] private float lerpCoef;
 
         private Vector3 _lastDir;
         private Vector3 _currentLookDir;
+        private PlayerDeath _death;
 
         #endregion
 
@@ -26,6 +28,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         {
             _lastDir = Vector3.forward;
             _currentLookDir = Vector3.forward;
+            _death = GetComponent<PlayerDeath>();
         }
 
         protected override void OnFixedUpdate()
@@ -33,6 +36,9 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
             base.OnFixedUpdate();
             GetDir();
 
+            if (_death.isDed)
+                return;
+            
             var angle = Vector3.Dot(_lastDir, _currentLookDir) / (_currentLookDir.magnitude * _lastDir.magnitude);
             if (Mathf.Acos(angle) > Constants.MinPlayerRotationAngle)
             {

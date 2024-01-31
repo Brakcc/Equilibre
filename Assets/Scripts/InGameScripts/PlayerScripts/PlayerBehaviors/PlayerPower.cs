@@ -2,17 +2,18 @@
 using UnityEngine.InputSystem;
 using Utilities.CustomAttributes;
 
+//Git
 namespace InGameScripts.PlayerScripts.PlayerBehaviors
 {
     public class PlayerPower : AbstractPlayerBehavior
     {
         #region fields
         
-        [FieldImportanceLevel] [SerializeField] private Collider iceCollider;
-        [FieldImportanceLevel] [SerializeField] private Collider fireCollider;
+        [FieldCompletion] [SerializeField] private Collider iceCollider;
+        [FieldCompletion] [SerializeField] private Collider fireCollider;
 
-        [FieldImportanceLevel] [SerializeField] private MeshRenderer iceRend;
-        [FieldImportanceLevel] [SerializeField] private MeshRenderer fireRend;
+        [FieldCompletion] [SerializeField] private MeshRenderer iceRend;
+        [FieldCompletion] [SerializeField] private MeshRenderer fireRend;
 
         #endregion
 
