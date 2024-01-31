@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6894797695898090813}
   - component: {fileID: 6297009348356056403}
   - component: {fileID: 789543756740876203}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Player footprints
   m_TagString: Untagged
   m_Icon: {fileID: 0}

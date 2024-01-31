@@ -73,7 +73,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 3072
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8600000, guid: 1bbb281dfe1d6d74c8dc715600b63fa1, type: 2}
   m_TargetDisplay: 0
@@ -204,6 +204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow plate
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f8729448eeda8bc4bb6c8e5001426575,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
