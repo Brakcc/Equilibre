@@ -14,8 +14,8 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         [CheckerState] public bool isOnFire;
 
         public bool IsActivated { get; private set; }
-        [SerializeField] private DoorInter doorRef;
-        public DoorInter DoorRef { get => doorRef; private set => doorRef = value; }
+        [SerializeField] private DoorInter[] doorRef;
+        public DoorInter[] DoorRef { get => doorRef; private set => doorRef = value; }
 
         #endregion
 
@@ -26,6 +26,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             fireRend.enabled = isOnFire;
             externFire.enabled = isOnFire;
             light.intensity = GetLightIntensity(isOnFire);
+            IsActivated = isOnFire;
         }
 
         protected override void OnTriggerEnter(Collider other)
@@ -43,8 +44,14 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             fireRend.enabled = active;
             externFire.enabled = active;
             light.intensity = GetLightIntensity(active);
+            
             IsActivated = isOnFire;
-            DoorRef.OnActivatorChangeState();
+            if (DoorRef.Length == 0)
+                return;
+            foreach (var d in DoorRef)
+            {
+                d.OnActivatorChangeState();
+            }
         }
 
         public void OnActivatorAction() {}

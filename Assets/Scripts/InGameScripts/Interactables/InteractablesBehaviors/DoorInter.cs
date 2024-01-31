@@ -14,6 +14,9 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         
         [SerializeField] private bool[] statesRefs;
 
+        [Tooltip("En Millisecondes")]
+        [SerializeField] private int doorCoolDown;
+            
         private Collider _meshCol;
         private MeshRenderer _meshRend;
 
@@ -21,16 +24,17 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
         #region methodes
 
-        private void Start()
+        private async void Start()
         {
             _meshCol = GetComponent<Collider>();
             _meshRend = GetComponent<MeshRenderer>();
-            OnAction();
+            await Task.Delay(Constants.DelayBeforeDoorAction);
+            OnActivatorChangeState();
         }
 
         public async void OnActivatorChangeState()
         {
-            await Task.Delay(Constants.DelayBeforeDoorAction);
+            await Task.Delay(doorCoolDown);
             OnAction();
         }
 
