@@ -80,6 +80,6 @@ Material:
     m_Colors:
     - _Foam_color: {r: 1, g: 1, b: 1, a: 0}
     - _Transparency_range: {r: 0, g: 1, b: 0, a: 0}
-    - _Water_color: {r: 0.31479177, g: 0.39736727, b: 0.509434, a: 0}
-    - _Water_color_2: {r: 0.36672303, g: 0.5195017, b: 0.6320754, a: 0}
+    - _Water_color: {r: 0.05517978, g: 0.31562603, b: 0.3773585, a: 0}
+    - _Water_color_2: {r: 0.20536669, g: 0.6034621, b: 0.6698113, a: 0}
   m_BuildTextureStacks: []
