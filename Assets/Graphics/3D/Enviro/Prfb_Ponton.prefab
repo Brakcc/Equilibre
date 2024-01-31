@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c9bb9be1e3ea3fe4db11130e327ee64f,
         type: 3}
       propertyPath: m_Name
-      value: Ponton
+      value: Prfb_Ponton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
