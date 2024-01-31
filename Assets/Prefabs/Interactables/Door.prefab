@@ -118,8 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2147b442560464388c16012c1e7e505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activators:
-  - {fileID: 0}
-  - {fileID: 0}
+  activators: []
   statesRefs: 
   doorCoolDown: 100
