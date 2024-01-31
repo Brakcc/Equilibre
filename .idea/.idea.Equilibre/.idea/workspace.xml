@@ -5,27 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="387f7f1a-5b27-4b3f-97a9-024bcad67bf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IActivator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IActivator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/InterrupterInter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/InterrupterInter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/InterfaceConstraintDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/InterfaceConstraintDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/InterfaceConstraint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/InterfaceConstraint.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blocs/DeathZone.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blocs/DeathZone.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blocs/Torch.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blocs/Torch.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/AbstractInteractableBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/AbstractInteractableBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DeathZoneInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DeathZoneInter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DoorInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/DoorInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IActivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IActivator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceBlockInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceBlockInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceGroundInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceGroundInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/InterrupterInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/InterrupterInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/SnowInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/SnowInter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/TorchInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/TorchInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/WaterInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/WaterInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/AbstractPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/AbstractPlayerBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PivotBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PivotBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerGrounding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerGrounding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPush.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPush.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerFullBehave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerFullBehave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/CheckerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/CheckerState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/BoolHidePorpertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/BoolHidePorpertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/CheckerStateDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/CheckerStateDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/FieldColorLerpDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/FieldColorLerpDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/FieldImportanceLevelDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/FieldImportanceLevelDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/HideInSubClassDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/HideInSubClassDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/HidePropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/HidePropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/InterfaceConstraintDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/InterfaceConstraintDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/ReadOnlyPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/ReadOnlyPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/SecuHidePropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/Editor/SecuHidePropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldColorLerp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldColorLerp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldColors/FieldColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldColors/FieldColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldColors/GetFieldColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldColors/GetFieldColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldCompletion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/FieldCompletion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/HideInSubClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/HideInSubClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/InterfaceConstraint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/InterfaceConstraint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ReadOnly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ReadOnly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ShowIfBoolTrue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ShowIfBoolTrue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ShowIfSecu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ShowIfSecu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ShowIfTrue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomAttributes/ShowIfTrue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomExceptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/CustomExceptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Fonctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Fonctions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/IUIHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/IUIHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/SoundManagement/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/SoundManagement/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/SoundManagement/IfHitPlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/SoundManagement/IfHitPlay.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +144,7 @@
       <updated>1706541069966</updated>
       <workItem from="1706541077097" duration="17000" />
       <workItem from="1706606673657" duration="47237000" />
+      <workItem from="1706691455163" duration="297000" />
     </task>
     <servers />
   </component>

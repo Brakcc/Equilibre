@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//Git
 namespace InGameScripts.Interactables.InteractablesBehaviors
 {
     public sealed class SnowInter : AbstractInteractableBehavior

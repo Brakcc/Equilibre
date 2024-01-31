@@ -1,7 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Utilities.CustomAttributes;
 
+//Git
 namespace InGameScripts.Interactables.InteractablesBehaviors
 {
     public class WaterInter : AbstractInteractableBehavior

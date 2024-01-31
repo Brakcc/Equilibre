@@ -1,6 +1,7 @@
 ﻿using InGameScripts.PlayerScripts.PlayerBehaviors;
 using UnityEngine;
 
+//Git
 namespace InGameScripts.Interactables.InteractablesBehaviors
 {
     public sealed class DeathZoneInter : AbstractInteractableBehavior
