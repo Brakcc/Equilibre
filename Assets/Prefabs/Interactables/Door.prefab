@@ -121,3 +121,5 @@ MonoBehaviour:
   activators:
   - {fileID: 0}
   - {fileID: 0}
+  statesRefs: 
+  doorCoolDown: 100
