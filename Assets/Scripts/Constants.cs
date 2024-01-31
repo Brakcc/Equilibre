@@ -19,5 +19,6 @@
     public const float RespawnOffsetHeight = 0.5f;
     public const float SecuDeltaTimeOffset = -0.01f;
     public const int DelayBeforeDoorAction = 500;
+    public const float HalfCubeSizeConsideration = 0.5f;
 }
 //Git

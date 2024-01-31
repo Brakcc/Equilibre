@@ -33,9 +33,11 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
             {
                 _currentActivatorInRange.OnActivatorAction();
             }
-            
+
             if (HasActivatorInRange(out var hit) && _currentActivatorInRange == null)
+            {
                 _currentActivatorInRange = hit.transform.GetComponent<IActivator>();
+            }
             
             else if (!HasActivatorInRange(out _))
                 _currentActivatorInRange = null;
