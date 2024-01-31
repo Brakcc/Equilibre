@@ -362,6 +362,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c5cc5c1ef7f43cfbe5cad6209f1e5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushAndClick: {fileID: -7024737757358991045, guid: 84885fc1d65564a4c927d656fdb83c92,
+    type: 3}
+  move: {fileID: -1680190386980627800, guid: 84885fc1d65564a4c927d656fdb83c92, type: 3}
+  raySize: 5
+  activatorLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &2239044348417943377
 MonoBehaviour:
   m_ObjectHideFlags: 0
