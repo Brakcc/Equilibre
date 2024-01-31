@@ -9673,7 +9673,7 @@ GameObject:
   - component: {fileID: 5172270175549751049}
   - component: {fileID: 7572295724348834590}
   m_Layer: 0
-  m_Name: IceBeam_Start
+  m_Name: Ice_LaserVFX_final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
