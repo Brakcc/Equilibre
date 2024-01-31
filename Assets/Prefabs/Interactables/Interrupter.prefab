@@ -124,7 +124,7 @@ MonoBehaviour:
   isActive: 0
   doorRef: []
   activationCooldown: 1
-  animation: {fileID: 1592034005276455871}
+  anim: {fileID: 1592034005276455871}
   onEnableVFX: {fileID: 521576972522902853}
   onDisableVFX: {fileID: 521576972522902853}
 --- !u!1001 &4162909404254643876

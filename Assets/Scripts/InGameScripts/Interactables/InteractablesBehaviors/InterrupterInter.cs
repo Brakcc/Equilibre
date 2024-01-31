@@ -20,7 +20,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         private float _cooldownCounter;
 
         [Header("Graph")]
-        public Animation animation;
+        public Animation anim;
         public ParticleSystem onEnableVFX;
         public ParticleSystem onDisableVFX;
 
@@ -33,11 +33,11 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             IsActivated = isStartingOn;
             if (IsActivated)
             {
-                animation.Play("Switch on");
+                anim.Play("Switch on");
             }
             else
             {
-                animation.Play("Switch off");
+                anim.Play("Switch off");
             }
             _cooldownCounter = Constants.SecuDeltaTimeOffset;
         }
@@ -62,12 +62,12 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             if (IsActivated)
             {
                 onEnableVFX.Play();
-                animation.Play("Switch on");
+                anim.Play("Switch on");
             }
             else
             {
                 onEnableVFX.Play();
-                animation.Play("Switch off");
+                anim.Play("Switch off");
             }
             
             // Not graph

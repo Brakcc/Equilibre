@@ -8,9 +8,8 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         #region fields
 
         [Header("Graph")]
-        public Animation liquefactionAnim;
+        public Animation anim;
         public ParticleSystem liquefactionVFX;
-        public Animation solidificationAnim;
         public ParticleSystem solidificationVFX;
 
         #endregion
@@ -27,8 +26,9 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
         protected override void OnAction()
         {
-
-            Destroy(gameObject);
+            anim.Play();
+            liquefactionVFX.Play();
+            Destroy(gameObject, Mathf.Max(anim.clip.length, liquefactionVFX.main.duration));
         }
 
         #endregion
