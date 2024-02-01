@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="387f7f1a-5b27-4b3f-97a9-024bcad67bf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/FirePowerUnlock.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/FirePowerUnlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/InGameUI/UnlockFeedback.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/InGameUI/UnlockFeedback.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/PlayerScripts/PlayerBehaviors/PlayerPower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT Snow height.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT Snow height.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blocs/IceBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Blocs/IceBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Torch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Torch.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MartinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MartinScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/FirePowerUnlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/FirePowerUnlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceBlockInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/IceBlockInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIScripts/InGameUI/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/InGameUI/PauseManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Equilibre.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Equilibre.sln.DotSettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +68,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\c.strappazzonmarques\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\c.strappazzonmarques\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\c.strappazzonmarques\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\cleme\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\cleme\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\cleme\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -115,6 +132,7 @@
       <workItem from="1706606673657" duration="47237000" />
       <workItem from="1706691455163" duration="297000" />
       <workItem from="1706693705601" duration="34279000" />
+      <workItem from="1706749285759" duration="3065000" />
     </task>
     <servers />
   </component>

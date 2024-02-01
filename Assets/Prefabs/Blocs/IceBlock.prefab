@@ -177,6 +177,7 @@ MonoBehaviour:
   anim: {fileID: 6502176860952942206}
   liquefactionVFX: {fileID: 8239507253932274558}
   solidificationVFX: {fileID: 0}
+  col: {fileID: 592139147649430763}
 --- !u!1001 &1541229869436748305
 PrefabInstance:
   m_ObjectHideFlags: 0

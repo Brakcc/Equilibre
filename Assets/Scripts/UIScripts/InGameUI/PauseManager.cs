@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +18,8 @@ namespace UIScripts.InGameUI
 
         private void Start()
         {
+            Time.timeScale = 1;
+            Cursor.visible = false;
             pauseGO.SetActive(false);
         }
 
@@ -27,12 +28,14 @@ namespace UIScripts.InGameUI
             if (!_isPaused)
             {
                 _isPaused = true;
+                Cursor.visible = true;
                 Time.timeScale = 0;
                 pauseGO.SetActive(true);
             }
             else
             {
                 _isPaused = false;
+                Cursor.visible = false;
                 Time.timeScale = 1;
                 pauseGO.SetActive(false);
             }
@@ -41,11 +44,16 @@ namespace UIScripts.InGameUI
         public void OnResume()
         {
             _isPaused = false;
+            Cursor.visible = false;
             Time.timeScale = 1;
             pauseGO.SetActive(false);
         }
 
-        public void OnBackToMenu() => SceneManager.LoadScene("Menu");
+        public void OnBackToMenu()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Menu");
+        }
 
         #endregion
     }
