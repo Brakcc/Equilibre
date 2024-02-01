@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Utilities.CustomAttributes;
 
 //Git
 namespace InGameScripts.Interactables.InteractablesBehaviors
@@ -11,6 +12,9 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         public Animation anim;
         public ParticleSystem liquefactionVFX;
         public ParticleSystem solidificationVFX;
+
+        [Header("Meca")] [FieldCompletion] [SerializeField]
+        private BoxCollider col;
 
         #endregion
 
@@ -26,6 +30,11 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
         protected override void OnAction()
         {
+            if (!col.enabled)
+                return;
+
+            GetComponent<BoxCollider>().enabled = false;
+            col.enabled = false;
             anim.Play();
             liquefactionVFX.Play();
             Destroy(gameObject, Mathf.Max(anim.clip.length, liquefactionVFX.main.duration));
