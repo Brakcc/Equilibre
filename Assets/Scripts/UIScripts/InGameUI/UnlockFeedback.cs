@@ -18,7 +18,7 @@ namespace UIScripts.InGameUI
 
         public void OnEnable()
         {
-            unlockFeed.text = "FIRE  UNLOCKED  !!!";
+            unlockFeed.text = "ICE  UNLOCKED  !!!";
             transform.DOMoveY(transform.position.y + 0.75f, 2);
             unlockFeed.color = Color.red;
             
