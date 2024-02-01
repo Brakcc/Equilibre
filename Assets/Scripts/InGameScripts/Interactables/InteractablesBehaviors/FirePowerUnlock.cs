@@ -20,7 +20,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
                 return;
             
             var p = other.GetComponent<PlayerPower>();
-            p.hasFireUnlocked = true;
+            p.hasIceUnlocked = true;
             var goI = Instantiate(feedback, transform.position + Vector3.up * 5, Quaternion.identity);
             Destroy(gameObject);
         }

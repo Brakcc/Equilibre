@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using Utilities.CustomAttributes;
 
 //Git
@@ -18,7 +19,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         [FieldCompletion] [SerializeField] private ParticleSystem iceParts;
         [FieldCompletion] [SerializeField] private ParticleSystem fireParts;
 
-        public bool hasFireUnlocked;
+        [FormerlySerializedAs("hasFireUnlocked")] public bool hasIceUnlocked;
         
         #endregion
 
@@ -28,7 +29,7 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         {
             base.OnStart();
 
-            hasFireUnlocked = false;
+            hasIceUnlocked = false;
             
             iceCollider.enabled = false;
             fireCollider.enabled = false;
@@ -45,9 +46,6 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
             if (iceCollider.enabled)
                 return;
             
-            if (!hasFireUnlocked)
-                return;
-            
             fireCollider.enabled = ctx.performed;
             //fireRend.enabled = ctx.performed;
             if (ctx.performed)
@@ -59,6 +57,9 @@ namespace InGameScripts.PlayerScripts.PlayerBehaviors
         public void OnActivateIce(InputAction.CallbackContext ctx)
         {
             if (fireCollider.enabled)
+                return;
+            
+            if (!hasIceUnlocked)
                 return;
             
             iceCollider.enabled = ctx.performed;
