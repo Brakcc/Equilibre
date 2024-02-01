@@ -141,8 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00d09b8dbe7ee547a271fbbbcdd5b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playlist: []
-  audiosource: {fileID: 0}
+  playlist:
+  - {fileID: 8300000, guid: 2aa4653ca8807dd41a97fe3dd6ba6335, type: 3}
+  audiosource: {fileID: 4971075195281098868}
   musicID: 0
   needToSwitch: 0
-  soundeffmix: {fileID: 0}
+  soundeffmix: {fileID: 24300002, guid: b1c7bbc2aa52682498e8e003a48a1ac3, type: 2}
