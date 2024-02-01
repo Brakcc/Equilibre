@@ -415,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsBaseOn: 1
   hasSnowOnBlock: 0
-  noIceTimer: 2.5
+  noIceTimer: 5
   iceLayer: {fileID: 6944292785242283438}
 --- !u!1 &6944292785242283438
 GameObject:
