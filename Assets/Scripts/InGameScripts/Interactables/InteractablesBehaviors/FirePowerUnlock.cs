@@ -1,5 +1,6 @@
 ﻿using InGameScripts.PlayerScripts.PlayerBehaviors;
 using UnityEngine;
+using UnityEngine.UI;
 using Utilities.CustomAttributes;
 
 namespace InGameScripts.Interactables.InteractablesBehaviors
@@ -9,6 +10,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
         #region fields
 
         [FieldCompletion] [SerializeField] private GameObject feedback;
+        [FieldCompletion] [SerializeField] private Image buttonUI;
 
         #endregion
         
@@ -22,6 +24,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             var p = other.GetComponent<PlayerPower>();
             p.hasIceUnlocked = true;
             var goI = Instantiate(feedback, transform.position + Vector3.up * 5, Quaternion.identity);
+            buttonUI.enabled = true;
             Destroy(gameObject);
         }
 

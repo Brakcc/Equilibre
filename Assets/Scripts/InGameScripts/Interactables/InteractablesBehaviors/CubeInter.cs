@@ -37,7 +37,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
         private void Update()
         {
-            if (Physics.Raycast(cubeRef.transform.position, Vector3.down, out var hit, 2f, fullLayer))
+            if (Physics.Raycast(cubeRef.transform.position, Vector3.down, out var hit, 5f, fullLayer))
             {
                 if (hit.transform.gameObject.layer == 10)
                 {
@@ -48,7 +48,8 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
                 }
             }
 
-            _currentPlayer = HasPlayer();
+            if (!IsActivated || _currentCubeDir == CubeDir.Default)
+                HasPlayer();
             
             OnMoveCube();
         }
@@ -61,7 +62,7 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
         public void OnActivatorAction()
         {
-            if (IsActivated)
+            if (IsActivated && _currentMoveDir != Vector3.zero)
                 return;
             
             _currentMoveDir = GetDir(_currentCubeDir);
@@ -73,6 +74,8 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             if (!IsActivated)
                 return;
 
+            //Debug.Log($"{_currentCubeDir} + {_currentMoveDir}");
+            
             if (IsWallHitting(_currentCubeDir, out var wall))
             {
                 if (wall.transform.gameObject.layer is 6 or 8 or 9)
@@ -83,9 +86,9 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
                 }
             }
             
-            if (IsHittingGround(_currentCubeDir, out var hit))
+            if (IsHittingGround(_currentCubeDir, out var hit, out _))
             {
-                if (hit.transform.gameObject.layer is 6 or 8 or 9)
+                if (hit.transform.gameObject.layer is 6 or 8 or 9 /*|| hitSecu.transform.gameObject.layer is 6 or 8 or 9*/)
                 {
                     IsActivated = false;
                     _currentMoveDir = Vector3.zero;
@@ -98,46 +101,66 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
 
         #region rays
 
-        private bool IsHittingGround(CubeDir dir, out RaycastHit ray)
+        private bool IsHittingGround(CubeDir dir, out RaycastHit ray, out RaycastHit raySecu)
         {
             ray = default;
+            raySecu = default;
+            
             var pos = cubeRef.transform.position;
+            
+            var r1 = Physics.Raycast(pos + new Vector3(0, 0, Constants.HalfCubeSizeConsideration + sideRayOffset),
+                Vector3.down, out var hit1, 5,
+                fullLayer);
+            // var l1 = Physics.Raycast(pos + new Vector3(0, 0, Constants.HalfCubeSizeConsideration + sideRayOffset + 0.1f),
+            //     Vector3.down, out var hit10, 5,
+            //     fullLayer);
+            
+            var r2 = Physics.Raycast(pos + new Vector3(Constants.HalfCubeSizeConsideration + sideRayOffset, 0, 0),
+                Vector3.down, out var hit2, 5,
+                fullLayer);
+            //var l2 = Physics.Raycast(pos + new Vector3(Constants.HalfCubeSizeConsideration + sideRayOffset + 0.1f, 0, 0),
+            //    Vector3.down, out var hit20, 5,
+            //    fullLayer);
+            
+            var r3 = Physics.Raycast(pos + new Vector3(0, 0, -(Constants.HalfCubeSizeConsideration + sideRayOffset)),
+                Vector3.down, out var hit3, 5,
+                fullLayer);
+            //var l3 = Physics.Raycast(pos + new Vector3(0, 0, -(Constants.HalfCubeSizeConsideration + sideRayOffset + 0.1f)),
+            //    Vector3.down, out var hit30, 5,
+            //    fullLayer);
+            
+            var r4 = Physics.Raycast(pos + new Vector3(-(Constants.HalfCubeSizeConsideration + sideRayOffset), 0, 0),
+                Vector3.down, out var hit4, 5,
+                fullLayer);
+            //var l4 = Physics.Raycast(pos + new Vector3(-(Constants.HalfCubeSizeConsideration + sideRayOffset + 0.1f), 0, 0),
+            //    Vector3.down, out var hit40, 5,
+            //    fullLayer);
+            
             switch (dir)
             {
                 case CubeDir.North :
-                    var r1 = Physics.Raycast(pos + new Vector3(0, 0,
-                            Constants.HalfCubeSizeConsideration + sideRayOffset),
-                        Vector3.down, out var hit1, Constants.HalfCubeSizeConsideration + Constants.MaxStepHeight,
-                        fullLayer);
                     ray = hit1;
-                    return r1;
+                    //raySecu = hit10;
+                    return r1 /*|| l1*/;
 
                 case CubeDir.East :
-                    var r2 = Physics.Raycast(pos + new Vector3(Constants.HalfCubeSizeConsideration + sideRayOffset,
-                                        0, 0),
-                        Vector3.down, out var hit2, Constants.HalfCubeSizeConsideration + Constants.MaxStepHeight,
-                        fullLayer);
                     ray = hit2;
-                    return r2;
+                    //raySecu = hit20;
+                    return r2 /*|| l2*/;
 
                 case CubeDir.South :
-                    var r3 = Physics.Raycast(pos + new Vector3(0, 0,
-                                        -(Constants.HalfCubeSizeConsideration + sideRayOffset)),
-                        Vector3.down, out var hit3, Constants.HalfCubeSizeConsideration + Constants.MaxStepHeight,
-                        fullLayer);
                     ray = hit3;
-                    return r3;
+                    //raySecu = hit30;
+                    return r3 /*|| l3*/;
 
                 case CubeDir.West :
-                    var r4 = Physics.Raycast(pos + new Vector3(-(Constants.HalfCubeSizeConsideration + sideRayOffset),
-                                        0, 0),
-                        Vector3.down, out var hit4, Constants.HalfCubeSizeConsideration + Constants.MaxStepHeight,
-                        fullLayer);
                     ray = hit4;
-                    return r4;
+                    //raySecu = hit40;
+                    return r4 /*|| l4*/;
 
                 default :
                     ray = default;
+                    //raySecu = default;
                     return false;
             }
         }
@@ -150,28 +173,28 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             {
                 case CubeDir.North :
                     var r1 = Physics.Raycast(pos + Vector3.forward * 0.51f,
-                        Vector3.forward, out var hit1, 0.1f,
+                        Vector3.forward, out var hit1, 0.15f,
                         fullLayer);
                     ray = hit1;
                     return r1;
 
                 case CubeDir.East :
                     var r2 = Physics.Raycast(pos + Vector3.right * 0.51f,
-                        Vector3.right, out var hit2, 0.1f,
+                        Vector3.right, out var hit2, 0.15f,
                         fullLayer);
                     ray = hit2;
                     return r2;
 
                 case CubeDir.South :
                     var r3 = Physics.Raycast(pos + Vector3.back * 0.51f,
-                        Vector3.back, out var hit3, 0.1f,
+                        Vector3.back, out var hit3, 0.15f,
                         fullLayer);
                     ray = hit3;
                     return r3;
 
                 case CubeDir.West :
                     var r4 = Physics.Raycast(pos + Vector3.left * 0.51f,
-                        Vector3.left, out var hit4, 0.1f,
+                        Vector3.left, out var hit4, 0.15f,
                         fullLayer);
                     ray = hit4;
                     return r4;
@@ -182,34 +205,33 @@ namespace InGameScripts.Interactables.InteractablesBehaviors
             }
         }
         
-        private GameObject HasPlayer()
+        private void HasPlayer()
         {
             if (Physics.Raycast(transform.position, Vector3.forward, out var hit1, 1.5f, playerLayer))
             {
                 _currentCubeDir = CubeDir.South;
-                return hit1.transform.gameObject;
+                _currentPlayer =  hit1.transform.gameObject;
             }
 
             if (Physics.Raycast(transform.position, Vector3.right, out var hit2, 1.5f, playerLayer))
             {
                 _currentCubeDir = CubeDir.West;
-                return hit2.transform.gameObject;
+                _currentPlayer =  hit2.transform.gameObject;
             }
 
             if (Physics.Raycast(transform.position, Vector3.back, out var hit3, 1.5f, playerLayer))
             {
                 _currentCubeDir = CubeDir.North;
-                return hit3.transform.gameObject;
+                _currentPlayer =  hit3.transform.gameObject;
             }
 
             if (Physics.Raycast(transform.position, Vector3.left, out var hit4, 1.5f, playerLayer))
             {
                 _currentCubeDir = CubeDir.East;
-                return hit4.transform.gameObject;
+                _currentPlayer =  hit4.transform.gameObject;
             }
 
             //_currentCubeDir = CubeDir.Default;
-            return null;
         }
 
         #endregion

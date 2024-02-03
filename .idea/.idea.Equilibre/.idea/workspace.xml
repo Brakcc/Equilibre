@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="387f7f1a-5b27-4b3f-97a9-024bcad67bf3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIScripts/InGameUI/UnlockFeedback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/InGameUI/UnlockFeedback.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Mask_Clouds_001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Mask_Clouds_001.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Nuages.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Nuages.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Nuages.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Nuages.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Ombres nuages.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Ombres nuages.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Patoune.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Patoune.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Patoune.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Patoune.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ImportsUI/Jam_BoutonsUiIngame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ImportsUI/Jam_BoutonsUiIngame.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Equilibre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Shaders/Neige/Neige zone 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Neige/Neige zone 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/VFX/Glace/Neige/RT zone 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Interrupter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Interrupter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/TestInputs.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TempMaterials/Pause.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TempMaterials/Pause.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MartinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MartinScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/CubeInter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/CubeInter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/FirePowerUnlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameScripts/Interactables/InteractablesBehaviors/FirePowerUnlock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Back",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging Back&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\c.strappazzonmarques\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\c.strappazzonmarques\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\c.strappazzonmarques\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\cleme\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\cleme\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\cleme\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Equilibre.exe" />
@@ -113,6 +137,8 @@
       <workItem from="1706693705601" duration="34279000" />
       <workItem from="1706749285759" duration="3065000" />
       <workItem from="1706779105510" duration="338000" />
+      <workItem from="1706879293902" duration="4372000" />
+      <workItem from="1706989147562" duration="1995000" />
     </task>
     <servers />
   </component>
